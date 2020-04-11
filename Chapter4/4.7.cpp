@@ -44,7 +44,7 @@ int KMP(string text, string pattern) {
             i++;
             j++;
         } else {
-            j = nextTable[j];					//当前字符匹配失败
+            j = nextTable[j];                   //当前字符匹配失败
         }
         if (j == m) {                           //模式串匹配成功
             number++;
