@@ -1,7 +1,7 @@
 /*
 * 题目名称：叠筐
 * 题目来源：HDU 2074
-* 题目链接: http://acm.hdu.edu.cn/showproblem.php?pid=2074
+* 题目链接：http://acm.hdu.edu.cn/showproblem.php?pid=2074
 * 代码作者：杨泽邦(炉灰)
 */
 
