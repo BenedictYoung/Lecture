@@ -15,7 +15,7 @@ const int MAXM = 10000 + 10;
 
 int nextTable[MAXM];
 
-void GetNextTable(string pattern) {                  //创建next表
+void GetNextTable(string pattern) {             //创建next表
     int m = pattern.size();
     int j = 0;
     nextTable[j] = -1;
