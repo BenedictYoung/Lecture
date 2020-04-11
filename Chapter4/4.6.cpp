@@ -42,12 +42,12 @@ int KMP(int n, int m) {
             i++;
             j++;
         } else {
-            j = nextTable[j];			        //当前字符匹配失败
+            j = nextTable[j];                   //当前字符匹配失败
         }
     }
-    if (j == m) {           					//模式串匹配成功
+    if (j == m) {                               //模式串匹配成功
         return i - j + 1;
-    } else {                					//模式串匹配失败
+    } else {                                    //模式串匹配失败
         return -1;
     }
 }
