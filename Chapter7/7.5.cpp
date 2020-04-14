@@ -10,27 +10,35 @@
 #include <cstring>
 #include <algorithm>
 #include <queue>
-
+ 
 using namespace std;
-
+ 
 const int MAXN = 2e5 + 10;
-
+ 
 struct Island {
     long long left;             //岛屿左端点
     long long right;            //岛屿右端点
 };
-
+ 
 struct Bridge {
     long long length;           //桥的长度
     long long index;            //桥的编号
 };
-
+ 
 struct Interval {
     long long minimum;          //区间最小值
     long long maxmum;           //区间最大值
     long long index;            //区间编号
+    bool operator< (Interval x) const {
+        return maxmum > x.maxmum;
+    }
 };
-
+ 
+Island island[MAXN];
+Bridge bridge[MAXN];
+Interval interval[MAXN];
+long long answer[MAXN];
+ 
 bool IntervalCompare(Interval x, Interval y) {
     if (x.minimum == y.minimum) {
         return x.maxmum < y.maxmum;
@@ -38,25 +46,20 @@ bool IntervalCompare(Interval x, Interval y) {
         return x.minimum < y.minimum;
     }
 }
-
+ 
 bool BridgeCompare(Bridge x, Bridge y) {
     return x.length < y.length;
 }
-
-Island island[MAXN];
-Bridge bridge[MAXN];
-Interval interval[MAXN];
-long long answer[MAXN];
 
 bool Solve(int n, int m) {
     priority_queue<Interval> myQueue;
     int position = 0;           //当前区间下标
     int number = 0;             //搭建桥的数目
     for (int i = 0; i < m; ++i) {
-        while (myQueue.top().maxmum < bridge[i].length && !myQueue.empty()) {
+        while (!myQueue.empty() && myQueue.top().maxmum < bridge[i].length) {
             myQueue.pop();      //当前区间无法搭建
         }
-        while (position < n - 1 && interval[position].minimum <= bridge[i].length && interval[position].maxmum >= bridge[i].length) {
+        while (position < n && interval[position].minimum <= bridge[i].length && interval[position].maxmum >= bridge[i].length) {
             myQueue.push(interval[position]);
             position++;
         }
@@ -69,7 +72,7 @@ bool Solve(int n, int m) {
     }
     return number == n - 1;     //判断桥数与区间数是否相等
 }
-
+ 
 int main() {
     int n, m;
     while (scanf("%d%d", &n, &m) != EOF) {
@@ -94,8 +97,13 @@ int main() {
         if (Solve(n, m)) {
             printf("Yes\n");
             for (int i = 0; i < n - 1; ++i) {
-                printf("%lld\n", answer[i]);
+                if (i == 0) {
+                    printf("%lld", answer[i]);
+                } else {
+                    printf(" %lld", answer[i]);
+                }
             }
+            printf("\n");
         } else {
             printf("No\n");
         }
