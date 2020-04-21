@@ -15,19 +15,19 @@ const int INF = INT_MAX / 10;
 const int MAXN = 1e4 + 10;
 
 int dp[MAXN];
-int value[MAXN];                    //物品价值
-int weight[MAXN];                   //物品重量
-int amount[MAXN];                   //物品数目
-int newValue[MAXN];                 //拆分后物品价值
-int newWeight[MAXN];                //拆分后物品重量
+int value[MAXN];                        //物品价值
+int weight[MAXN];                       //物品重量
+int amount[MAXN];                       //物品数目
+int newValue[MAXN];                     //拆分后物品价值
+int newWeight[MAXN];                    //拆分后物品重量
 
 int main() {
     int caseNumber;
     scanf("%d", &caseNumber);
     while (caseNumber--) {
         int n, m;
-        scanf("%d%d", &m, &n);      //n件物品，m容量的背包
-        int number = 0;             //分解后物品数量
+        scanf("%d%d", &m, &n);          //n件物品，m容量的背包
+        int number = 0;                 //分解后物品数量
         for (int i = 0; i < n; ++i) {
             scanf("%d%d%d", &weight[i], &value[i], &amount[i]);
             for (int j = 1; j <= amount[i]; j <<= 1) {
@@ -43,7 +43,7 @@ int main() {
             }
         }
         for (int i = 0; i <= m; ++i) {
-            dp[i] = 0;              //初始化
+            dp[i] = 0;                  //初始化
         }
         for (int i = 0; i < number; ++i) {
             for (int j = m; j >= newWeight[i]; --j) {
