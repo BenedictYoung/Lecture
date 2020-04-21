@@ -18,8 +18,8 @@ int dp[MAXM];
 int value[MAXN];                        //物品价值
 int weight[MAXN];                       //物品重量
 int amount[MAXN];                       //物品数目
-int newValue[MAXN * MAXN];              //拆分后物品价值
-int newWeight[MAXN * MAXN];             //拆分后物品重量
+int newValue[20 * MAXN];                //拆分后物品价值
+int newWeight[20 * MAXN];               //拆分后物品重量
 
 int main() {
     int caseNumber;
