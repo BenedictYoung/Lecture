@@ -11,7 +11,6 @@
 
 using namespace std;
 
-const int INF = INT_MAX / 10;
 const int MAXN = 100 + 10;
 const int MAXM = 1e4 + 10;
 
