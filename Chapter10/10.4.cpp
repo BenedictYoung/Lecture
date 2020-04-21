@@ -28,7 +28,7 @@ TreeNode* Insert(TreeNode* root, int x) {
     return root;
 }
 
-void PreOrder(TreeNode* root) {          			   	//前序遍历
+void PreOrder(TreeNode* root) {                         //前序遍历
     if (root == NULL) {
         return;
     }
@@ -38,7 +38,7 @@ void PreOrder(TreeNode* root) {          			   	//前序遍历
     return;
 }
 
-void InOrder(TreeNode* root) {          			   	//中序遍历
+void InOrder(TreeNode* root) {                          //中序遍历
     if (root == NULL) {
         return;
     }
@@ -48,7 +48,7 @@ void InOrder(TreeNode* root) {          			   	//中序遍历
     return;
 }
 
-void PostOrder(TreeNode* root) {          			   	//后序遍历
+void PostOrder(TreeNode* root) {                        //后序遍历
     if (root == NULL) {
         return;
     }

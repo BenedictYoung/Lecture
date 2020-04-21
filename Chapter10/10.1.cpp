@@ -29,7 +29,7 @@ TreeNode* Build(int& position, string str) {
     return root;
 }
 
-void InOrder(TreeNode* root) {          			    //中序遍历
+void InOrder(TreeNode* root) {							//中序遍历
     if (root == NULL) {
         return;
     }
@@ -42,7 +42,7 @@ void InOrder(TreeNode* root) {          			    //中序遍历
 int main() {
     string str;
     while (cin >> str) {
-        int position = 0;               				//标记字符串处理位置
+        int position = 0;								//标记字符串处理位置
         TreeNode* root = Build(position, str);
         InOrder(root);
         printf("\n");
