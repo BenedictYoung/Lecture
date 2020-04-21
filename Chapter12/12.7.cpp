@@ -13,11 +13,11 @@ using namespace std;
 const int MAXN = 1000 + 10;
 
 int dp[MAXN];
-int value[MAXN];                        //物品价值
-int weight[MAXN];                       //物品重量
+int value[MAXN];                            //物品价值
+int weight[MAXN];                           //物品重量
 
 int main() {
-    int n, m;                           //n件物品，m容量的背包
+    int n, m;                               //n件物品，m容量的背包
     while (scanf("%d%d", &m, &n) != EOF) {
         for (int i = 0; i < n; ++i) {
             scanf("%d%d", &weight[i], &value[i]);

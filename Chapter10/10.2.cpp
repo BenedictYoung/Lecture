@@ -30,7 +30,7 @@ TreeNode* Build(string str1, string str2) {
     return root;
 }
 
-void PostOrder(TreeNode* root) {          			   	//后序遍历
+void PostOrder(TreeNode* root) {                        //后序遍历
     if (root == NULL) {
         return;
     }

@@ -18,23 +18,23 @@ const int MAXN = 1000 + 10;
 const int INF = INT_MAX;
 
 struct Edge {
-    int to;                                 	//终点
-    int length;                                	//长度
+    int to;                                     //终点
+    int length;                                 //长度
     Edge(int t, int l): to(t), length(l) {}
 };
 
 vector<Edge> graph[MAXN];
-int earliest[MAXN];                         	//最早完成时间
-int latest[MAXN];                           	//最晚完成时间
-int inDegree[MAXN];                         	//入度
+int earliest[MAXN];                             //最早完成时间
+int latest[MAXN];                               //最晚完成时间
+int inDegree[MAXN];                             //入度
 
 int CriticalPath(int n) {
-    vector<int> topology;                   	//拓扑序列
+    vector<int> topology;                       //拓扑序列
     queue<int> node;
     for (int i = 0; i < n; ++i) {
         if (inDegree[i] == 0) {
             node.push(i);
-            earliest[i] = 1;                	//初始化为1
+            earliest[i] = 1;                    //初始化为1
         }
     }
     int totalTime = 0;                          //总耗时
