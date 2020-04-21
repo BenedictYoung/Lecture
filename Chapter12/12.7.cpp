@@ -10,9 +10,10 @@
 
 using namespace std;
 
-const int MAXN = 1000 + 10;
+const int MAXN = 100 + 10;
+const int MAXM = 1000 + 10;
 
-int dp[MAXN];
+int dp[MAXM];
 int value[MAXN];                            //物品价值
 int weight[MAXN];                           //物品重量
 

@@ -12,14 +12,15 @@
 using namespace std;
 
 const int INF = INT_MAX / 10;
-const int MAXN = 1e4 + 10;
+const int MAXN = 100 + 10;
+const int MAXM = 1e4 + 10;
 
-int dp[MAXN];
+int dp[MAXM];
 int value[MAXN];                        //物品价值
 int weight[MAXN];                       //物品重量
 int amount[MAXN];                       //物品数目
-int newValue[MAXN];                     //拆分后物品价值
-int newWeight[MAXN];                    //拆分后物品重量
+int newValue[MAXN * MAXN];              //拆分后物品价值
+int newWeight[MAXN * MAXN];             //拆分后物品重量
 
 int main() {
     int caseNumber;

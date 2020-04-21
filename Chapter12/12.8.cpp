@@ -12,9 +12,10 @@
 using namespace std;
 
 const int INF = INT_MAX / 10;
-const int MAXN = 1e4 + 10;
+const int MAXN = 500 + 10;
+const int MAXM = 1e4 + 10;
 
-int dp[MAXN];
+int dp[MAXM];
 int value[MAXN];                        //物品价值
 int weight[MAXN];                       //物品重量
 
