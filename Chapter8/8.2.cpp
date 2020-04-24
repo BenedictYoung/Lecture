@@ -10,7 +10,7 @@
 
 using namespace std;
 
-long long Function(int n) { 		        //递归函数
+long long Function(int n) {                 //递归函数
     if (n == 1) {                           //递归出口
         return 2;
     } else {                                //递归调用
