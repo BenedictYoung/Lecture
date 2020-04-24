@@ -13,11 +13,11 @@ using namespace std;
 int main() {
     int h;
     while (scanf("%d", &h) != EOF) {
-        int row = h;                        	//行数
-        int col = h + (h - 1) * 2;       		//列数
+        int row = h;                            //行数
+        int col = h + (h - 1) * 2;              //列数
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
-                if (j < col - (h + 2 * i)) {	//输出空格
+                if (j < col - (h + 2 * i)) {    //输出空格
                     printf(" ");
                 } else {                        //输出星号
                     printf("*");

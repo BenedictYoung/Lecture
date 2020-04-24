@@ -15,14 +15,14 @@ int dayTable[2][13] = {                     //预处理
     {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 };
 
-bool IsLeapYear(int year) {            		//判断是否为闰年
+bool IsLeapYear(int year) {                 //判断是否为闰年
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
 int main() {
     int year, month, day;
     while (scanf("%d%d%d", &year, &month, &day) != EOF) {
-        int number = 0;            			//记录天数
+        int number = 0;                     //记录天数
         int row = IsLeapYear(year);         //判断用哪一行
         for (int j = 0; j < month; ++j) {   //逐月添加天数
             number += dayTable[row][j];
