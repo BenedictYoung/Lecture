@@ -22,7 +22,7 @@ int main() {
         getline(cin, str);
         int position = str.find(' ');           //分界点
         string key = str.substr(0, position);   //学号作为关键字
-        student[key] = str;	                    //信息作为映射值
+        student[key] = str;                     //信息作为映射值
     }
     int m;
     scanf("%d", &m);

@@ -19,17 +19,17 @@ struct TreeNode {
 };
 
 TreeNode* Build(int& position, string str) {
-    char current = str[position++];           		    //当前字符
-    if (current== '#') {                     		    //返回空树
+    char current = str[position++];                     //当前字符
+    if (current== '#') {                                //返回空树
         return NULL;
     }
-    TreeNode* root = new TreeNode(current);   		    //创建新节点
-    root -> leftChild = Build(position, str);		    //创建左子树
-    root -> rightChild = Build(position, str);	        //创建右子树
+    TreeNode* root = new TreeNode(current);             //创建新节点
+    root -> leftChild = Build(position, str);           //创建左子树
+    root -> rightChild = Build(position, str);          //创建右子树
     return root;
 }
 
-void InOrder(TreeNode* root) {							//中序遍历
+void InOrder(TreeNode* root) {                          //中序遍历
     if (root == NULL) {
         return;
     }
@@ -42,7 +42,7 @@ void InOrder(TreeNode* root) {							//中序遍历
 int main() {
     string str;
     while (cin >> str) {
-        int position = 0;								//标记字符串处理位置
+        int position = 0;                               //标记字符串处理位置
         TreeNode* root = Build(position, str);
         InOrder(root);
         printf("\n");
