@@ -38,7 +38,7 @@ int KMP(int n, int m) {
     int i = 0;
     int j = 0;
     while (i < n && j < m) {
-        if (j == -1 || text[i] == pattern[j]) {	//当前字符匹配成功
+        if (j == -1 || text[i] == pattern[j]) { //当前字符匹配成功
             i++;
             j++;
         } else {

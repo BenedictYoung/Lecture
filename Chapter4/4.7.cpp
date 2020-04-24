@@ -40,7 +40,7 @@ int KMP(string text, string pattern) {
     int j = 0;
     int number = 0;                             //记录匹配次数
     while (i < n) {
-        if (j == -1 || text[i] == pattern[j]) {	//当前字符匹配成功
+        if (j == -1 || text[i] == pattern[j]) { //当前字符匹配成功
             i++;
             j++;
         } else {
