@@ -8,9 +8,9 @@
 #include <iostream>
 #include <cstdio>
 
-const int MAXN = 80 + 10;
-
 using namespace std;
+
+const int MAXN = 80 + 10;
 
 char matrix[MAXN][MAXN];
 
