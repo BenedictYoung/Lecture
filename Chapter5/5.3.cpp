@@ -25,12 +25,12 @@ int main() {
     scanf("%d", &n);
     int order = 0;
     for (int i = 0; i < n; ++i) {
-        int method;
-        scanf("%d", &method);
-        if (method == 1) {
+        int event;
+        scanf("%d", &event);
+        if (event == 1) {
             int number;                             //动物编号
             scanf("%d", &number);
-            if (number > 0) {
+            if (0 < number) {
                 dogs.push(animal(number, order++));
             } else {
                 cats.push(animal(number, order++));
