@@ -15,7 +15,7 @@ bool Judge(int x) {                     //判断是否为质数
     if (x < 2) {                        //小于2必定不是
         return false;
     }
-    int bound = sqrt(x) + 1;            //确定判断上界
+    int bound = sqrt(x);                //确定判断上界
     for (int i = 2; i <= bound; ++i) {
         if (x % i == 0) {
             return false;
