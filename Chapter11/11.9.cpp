@@ -9,6 +9,7 @@
 #include <cstdio>
 #include <cstring>
 #include <queue>
+#include <functional>
 
 using namespace std;
 
