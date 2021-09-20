@@ -11,7 +11,7 @@
 
 using namespace std;
 
-vector<int> pefectNumber;           //完数
+vector<int> perfectNumber;          //完数
 vector<int> abundantNumber;         //盈数
 
 int DivisorSum(int number) {
@@ -27,14 +27,14 @@ int DivisorSum(int number) {
 int main() {
     for (int i = 2; i <= 60; ++i) {
         if (i == DivisorSum(i)) {
-            pefectNumber.push_back(i);
+            perfectNumber.push_back(i);
         } else if (i < DivisorSum(i)) {
             abundantNumber.push_back(i);
         }
     }
     printf("E:");
-    for (int i = 0; i < pefectNumber.size(); ++i) {
-        printf(" %d", pefectNumber[i]);
+    for (int i = 0; i < perfectNumber.size(); ++i) {
+        printf(" %d", perfectNumber[i]);
     }
     printf("\n");
     printf("G:");
