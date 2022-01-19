@@ -45,11 +45,11 @@ int main() {
         }
         month = 0;
         row = IsLeapYear(year);
-        while (number > dayTable[row][month]) {
+        while (number > dayTable[row][month]) { //确定月
             number -= dayTable[row][month];
             month++;
         }
-        day = number;
+        day = number;                           //确定日
         printf("%04d-%02d-%02d\n", year, month, day);
     }
     return 0;
