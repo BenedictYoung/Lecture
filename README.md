@@ -16,8 +16,8 @@
 
 题目以及链接
 
-| 题目编号 |   题目名称  |      题目来源      |                    题目链接                    |     参考代码   | 
-|:--------:|:-----------:|:------------------:|:-------------------------------------------:|:-------------------------------------------:| 
+| 题目编号 |   题目名称  |                     题目链接                    |     参考代码   | 
+|:--------:|:-----------:|:-------------------------------------------:|:-------------------------------------------:| 
 | 例题1.1  	| A+B        						（HDU 1089）          		| http://acm.hdu.edu.cn/showproblem.php?pid=1089 			| https://github.com/BenedictYoung/Lecture/blob/master/Chapter1/1.1.cpp| 
 | 例题2.1  	| abc        						（清华大学复试上机题）			| http://t.cn/E9WMRTE                            			| https://github.com/BenedictYoung/Lecture/blob/master/Chapter2/2.1.cpp| 
 | 例题2.2  	| 反序数      						（清华大学复试上机题）			| http://t.cn/E9WBrut                            			| https://github.com/BenedictYoung/Lecture/blob/master/Chapter2/2.2.cpp| 
